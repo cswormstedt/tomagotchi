@@ -22,15 +22,20 @@ var tomagotchi = {
     this.happiness += 1;
     hungerMeter.innerHTML = "Hunger Meter: " + tomagotchi.hunger;
     happy.innerHTML = "Happiness: " +tomagotchi.happiness;
-    // if(this.hunger <= 0){
-    //   this.gainAge();
+    if(this.hunger <= 0){
+      this.gainAge();
     //   console.log(this.age)
     if(this.age >= 5){
       this.hunger = 10;
     }
+  }
+},
 
-
+  gainHappiness: function(){
+    this.happiness += 0.5;
+    happy.innerHTML = "Happiness: " +tomagotchi.happiness;
   },
+
   checkMorph: function(){
     if(this.age === 0){
       this.currentForm = "Baby";
@@ -86,7 +91,7 @@ feed.addEventListener('click', function(e){
       firstDiv.classList.add("hidden");
       secondDiv.classList.remove("hidden");
 
-  }, 1000)
+  }, 4000)
 
 
 sleepBtn.addEventListener('click', function(e){
@@ -99,6 +104,10 @@ sleepBtn.addEventListener('click', function(e){
     tomagotchi.isSleeping = false;
   }
   console.log(tomagotchi.isSleeping);
+
+  if(tomagotchi.isSleeping === true){
+    tomagotchi.gainHappiness();
+  }
 
   var body = document.getElementsByTagName('body')[0];
   body.style.backgroundColor ="#000000"
