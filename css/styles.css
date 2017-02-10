@@ -1,0 +1,49 @@
+body {
+	font-family: 'Josefin Sans', sans-serif;
+
+}
+
+.toma {
+	display: inline-flex;
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+img {
+	height: 175px;
+	width: 182px;
+	
+
+}
+
+#feedBtn {
+	padding: 15px 32px;
+	background-color: #7F5EFF;
+	font-weight: bold;
+	color: white;
+	border: none;
+	border-radius: 30px;
+	
+}
+
+#sleepBtn {
+	padding: 15px 32px;
+	background-color: #7F5EFF;
+	font-weight: bold;
+	color: white;
+	border: none;
+	border-radius: 30px;
+}
+
+.parent {
+	display: flex;
+	justify-content: center;
+}
+
+
+h2 {
+	text-align: center;
+
+}
