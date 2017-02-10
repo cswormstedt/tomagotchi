@@ -55,7 +55,7 @@ var tomagotchi = {
   },
   die: function(){
     this.life = false;
-    ("RIP " + this.name + " is Dead");
+    alert("RIP " + this.name + " is Dead");
   }
 }
 
